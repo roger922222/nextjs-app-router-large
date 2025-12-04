@@ -2,7 +2,7 @@ import { getBaseUrl } from "@/lib/http";
 
 // 在服务器组件中演示 Data Cache 与 no-store
 export default async function ServerCacheDemoPage() {
-  const baseUrl = getBaseUrl();
+  const baseUrl = await getBaseUrl();
 
   // Data Cache：通过 tags + revalidate 控制数据缓存；注意这只是数据缓存，不是整页缓存
   const dataCacheRes = await fetch(`${baseUrl}/api/posts`, {

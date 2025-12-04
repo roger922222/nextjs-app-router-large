@@ -1,0 +1,276 @@
+/* [project]/styles/image-optimization.css [app-client] (css) */
+.optimized-image-container {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-blur-placeholder {
+  filter: blur(20px);
+  width: 100%;
+  height: 100%;
+  transition: opacity .3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1.1);
+}
+
+.image-loading-indicator {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-spinner {
+  border: 3px solid #f3f3f3;
+  border-top-color: #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: 1s linear infinite spin;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.optimized-image-error {
+  background-color: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  display: flex;
+}
+
+.error-placeholder {
+  text-align: center;
+  color: #6c757d;
+}
+
+.error-placeholder span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[loading="lazy"] {
+  transition: opacity .3s, transform .3s;
+}
+
+.webp-notice {
+  color: #fff;
+  opacity: 0;
+  background: #000000b3;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  transition: opacity .3s;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.optimized-image-container:hover .webp-notice {
+  opacity: 1;
+}
+
+.image-performance-metrics {
+  color: #fff;
+  opacity: 0;
+  background: #000000b3;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-family: monospace;
+  font-size: 10px;
+  transition: opacity .3s;
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+}
+
+.optimized-image-container:hover .image-performance-metrics {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .optimized-image-container {
+    border-radius: 4px;
+  }
+
+  .loading-spinner {
+    border-width: 2px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .optimized-image-container {
+    background-color: #2a2a2a;
+  }
+
+  .optimized-image-error {
+    background-color: #1a1a1a;
+    border-color: #444;
+  }
+
+  .error-placeholder {
+    color: #aaa;
+  }
+}
+
+.image-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.image-aspect-ratio {
+  width: 100%;
+  height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-aspect-ratio img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ratio-16-9 {
+  padding-bottom: 56.25%;
+}
+
+.ratio-4-3 {
+  padding-bottom: 75%;
+}
+
+.ratio-1-1 {
+  padding-bottom: 100%;
+}
+
+.ratio-3-2 {
+  padding-bottom: 66.67%;
+}
+
+.ratio-21-9 {
+  padding-bottom: 42.86%;
+}
+
+/* [project]/app/globals.css [app-client] (css) */
+:root {
+  --bg: #f7f7f9;
+  --fg: #111827;
+  --muted: #6b7280;
+  --accent: #2563eb;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji;
+}
+
+header, nav {
+  z-index: 50;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+}
+
+nav .container {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem;
+  padding: .75rem 1rem;
+  display: flex;
+}
+
+nav a {
+  color: var(--fg);
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: .4rem;
+  padding: .35rem .6rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #f3f4f6;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: .6rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+small {
+  color: var(--muted);
+}
+
+button {
+  cursor: pointer;
+}
+
+input, textarea {
+  border: 1px solid #e5e7eb;
+  border-radius: .4rem;
+  width: 100%;
+  padding: .5rem;
+}
+
+label {
+  color: var(--muted);
+  margin-top: .5rem;
+  font-size: .9rem;
+  display: block;
+}
+
+form {
+  gap: .5rem;
+  display: grid;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: .75rem 0;
+}
+
+/*# sourceMappingURL=_496ff8e1._.css.map*/

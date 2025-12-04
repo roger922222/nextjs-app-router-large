@@ -1,0 +1,20 @@
+{
+  "node": {
+    "00c701591831a3f7a50498bff380b6b8d818dea42c": {
+      "workers": {
+        "app/on-demand-revalidate/page": {
+          "moduleId": "[project]/.next-internal/server/app/on-demand-revalidate/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/on-demand-revalidate/page.tsx [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "$$RSC_SERVER_ACTION_0",
+          "filename": "app/on-demand-revalidate/page.tsx"
+        }
+      },
+      "layer": {
+        "app/on-demand-revalidate/page": "rsc"
+      },
+      "exportedName": "$$RSC_SERVER_ACTION_0",
+      "filename": "app/on-demand-revalidate/page.tsx"
+    }
+  },
+  "edge": {}
+}

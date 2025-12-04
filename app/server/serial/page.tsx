@@ -1,7 +1,7 @@
 import { getBaseUrl } from "@/lib/http";
 
 export default async function ServerSerialPage() {
-  const baseUrl = getBaseUrl();
+  const baseUrl = await getBaseUrl();
   const opts: RequestInit = { cache: "no-store" };
 
   const aRes = await fetch(`${baseUrl}/api/posts?delay=800`, opts);

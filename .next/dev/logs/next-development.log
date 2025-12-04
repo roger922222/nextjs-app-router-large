@@ -1,20 +1,299 @@
-[00:00:01.533] Server  LOG     
-[00:00:01.533] Server  LOG        We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
-[00:00:01.533] Server  LOG        The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+[00:00:00.707] Server  LOG      ✓ Ready in 481ms
+[00:00:15.441] Server  ERROR   TimeoutError: The operation was aborted due to timeout
+[00:01:20.882] Server  ERROR   TimeoutError: The operation was aborted due to timeout
+[00:01:51.045] Server  LOG      ✓ Compiled in 30ms
+[00:01:54.514] Browser WARN    Image with src "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-family='Arial' font-size='16'%3E图片占位符%3C/text%3E%3C/svg%3E" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:01:54.514] Browser WARN    Image with src "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-family='Arial' font-size='16'%3E图片占位符%3C/text%3E%3C/svg%3E" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[00:26:00.529] Browser LOG     Performance Report: {"metrics":{},"network":{"downlink":1.5,"effectiveType":"4g","rtt":50,"saveData":false},"resources":[],"timestamp":1764745782894,"url":"http://localhost:3000/performance-monitor","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"}
+[00:26:08.377] Browser LOG     Performance Report: {"metrics":{},"network":{"downlink":1.5,"effectiveType":"4g","rtt":50,"saveData":false},"resources":[],"timestamp":1764745790706,"url":"http://localhost:3000/performance-monitor","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"}
+[00:26:37.519] Server  ERROR    ⨯ ./lib/performance-tests.ts:1:1
+Module not found: Can't resolve 'perf_hooks'
+> 1 | import { performance } from 'perf_hooks';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | // Performance Test Suite
+  4 | export interface TestResult {
 
-[00:00:01.533] Server  LOG        	- allowJs was set to true
-[00:00:01.533] Server  LOG        	- include was updated to add '.next/types/**/*.ts'
-[00:00:01.533] Server  LOG        	- include was updated to add '.next/dev/types/**/*.ts'
-[00:00:01.533] Server  LOG        	- plugins was updated to add { name: 'next' }
-[00:00:01.533] Server  LOG     
-[00:00:01.533] Server  LOG        The following mandatory changes were made to your tsconfig.json:
 
-[00:00:01.534] Server  LOG        	- esModuleInterop was set to true (requirement for SWC / babel)
-[00:00:01.534] Server  LOG        	- isolatedModules was set to true (requirement for SWC / Babel)
-[00:00:01.534] Server  LOG        	- jsx was set to react-jsx (next.js uses the React automatic runtime)
-[00:00:01.534] Server  LOG     
-[00:00:01.629] Server  LOG      ✓ Ready in 1439ms
-[00:00:50.293] Server  WARN    Error: Route "/server" used `headers().get`. `headers()` returns a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:00:50.297] Server  ERROR    ⨯ TypeError: h.get is not a function
-[00:00:50.424] Browser ERROR   uncaughtError: TypeError: h.get is not a function
-[00:47:32.093] Server  LOG      ✓ Compiled in 9ms
+
+Import traces:
+  Client Component Browser:
+    ./lib/performance-tests.ts [Client Component Browser]
+    ./components/PerformanceTestDemo.tsx [Client Component Browser]
+    ./components/PerformanceTestDemo.tsx [Server Component]
+    ./app/performance-test/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/performance-tests.ts [Client Component SSR]
+    ./components/PerformanceTestDemo.tsx [Client Component SSR]
+    ./components/PerformanceTestDemo.tsx [Server Component]
+    ./app/performance-test/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:26:37.649] Browser ERROR   ./lib/performance-tests.ts:1:1
+Module not found: Can't resolve 'perf_hooks'
+> 1 | import { performance } from 'perf_hooks';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | // Performance Test Suite
+  4 | export interface TestResult {
+
+Import traces:
+  Client Component Browser:
+    ./lib/performance-tests.ts [Client Component Browser]
+    ./components/PerformanceTestDemo.tsx [Client Component Browser]
+    ./components/PerformanceTestDemo.tsx [Server Component]
+    ./app/performance-test/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/performance-tests.ts [Client Component SSR]
+    ./components/PerformanceTestDemo.tsx [Client Component SSR]
+    ./components/PerformanceTestDemo.tsx [Server Component]
+    ./app/performance-test/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:26:37.662] Server  ERROR    ⨯ ./lib/performance-tests.ts:1:1
+Module not found: Can't resolve 'perf_hooks'
+> 1 | import { performance } from 'perf_hooks';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | // Performance Test Suite
+  4 | export interface TestResult {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./lib/performance-tests.ts [Client Component Browser]
+    ./components/PerformanceTestDemo.tsx [Client Component Browser]
+    ./components/PerformanceTestDemo.tsx [Server Component]
+    ./app/performance-test/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/performance-tests.ts [Client Component SSR]
+    ./components/PerformanceTestDemo.tsx [Client Component SSR]
+    ./components/PerformanceTestDemo.tsx [Server Component]
+    ./app/performance-test/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:26:37.794] Browser ERROR   uncaughtError: Error: ./lib/performance-tests.ts:1:1
+Module not found: Can't resolve 'perf_hooks'
+> 1 | import { performance } from 'perf_hooks';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | // Performance Test Suite
+  4 | export interface TestResult {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./lib/performance-tests.ts [Client Component Browser]
+    ./components/PerformanceTestDemo.tsx [Client Component Browser]
+    ./components/PerformanceTestDemo.tsx [Server Component]
+    ./app/performance-test/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/performance-tests.ts [Client Component SSR]
+    ./components/PerformanceTestDemo.tsx [Client Component SSR]
+    ./components/PerformanceTestDemo.tsx [Server Component]
+    ./app/performance-test/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:26:37.965] Browser ERROR   ./lib/performance-tests.ts:1:1
+Module not found: Can't resolve 'perf_hooks'
+> 1 | import { performance } from 'perf_hooks';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | // Performance Test Suite
+  4 | export interface TestResult {
+
+Import traces:
+  Client Component Browser:
+    ./lib/performance-tests.ts [Client Component Browser]
+    ./components/PerformanceTestDemo.tsx [Client Component Browser]
+    ./components/PerformanceTestDemo.tsx [Server Component]
+    ./app/performance-test/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/performance-tests.ts [Client Component SSR]
+    ./components/PerformanceTestDemo.tsx [Client Component SSR]
+    ./components/PerformanceTestDemo.tsx [Server Component]
+    ./app/performance-test/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:26:37.965] Browser ERROR   ./lib/performance-tests.ts:1:1
+Module not found: Can't resolve 'perf_hooks'
+> 1 | import { performance } from 'perf_hooks';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | // Performance Test Suite
+  4 | export interface TestResult {
+
+Import traces:
+  Client Component Browser:
+    ./lib/performance-tests.ts [Client Component Browser]
+    ./components/PerformanceTestDemo.tsx [Client Component Browser]
+    ./components/PerformanceTestDemo.tsx [Server Component]
+    ./app/performance-test/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/performance-tests.ts [Client Component SSR]
+    ./components/PerformanceTestDemo.tsx [Client Component SSR]
+    ./components/PerformanceTestDemo.tsx [Server Component]
+    ./app/performance-test/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:30:09.855] Browser ERROR   ./lib/performance-tests.ts:1:1
+Module not found: Can't resolve 'perf_hooks'
+> 1 | import { performance } from 'perf_hooks';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | // Performance Test Suite
+  4 | export interface TestResult {
+
+Import traces:
+  Client Component Browser:
+    ./lib/performance-tests.ts [Client Component Browser]
+    ./components/PerformanceTestDemo.tsx [Client Component Browser]
+    ./components/PerformanceTestDemo.tsx [Server Component]
+    ./app/performance-test/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/performance-tests.ts [Client Component SSR]
+    ./components/PerformanceTestDemo.tsx [Client Component SSR]
+    ./components/PerformanceTestDemo.tsx [Server Component]
+    ./app/performance-test/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:30:39.822] Server  LOG      ✓ Compiled in 15ms
+[00:32:36.104] Browser LOG     
+🧪 Running test suite: Image Optimization Tests
+[00:32:36.104] Browser LOG       Running: WebP Format Detection
+[00:32:36.104] Browser LOG         ✅ WebP Format Detection (3.30ms)
+[00:32:36.104] Browser LOG       Running: Image Compression
+[00:32:36.104] Browser LOG         ✅ Image Compression (0.10ms)
+[00:32:36.104] Browser LOG       Running: Responsive Image Generation
+[00:32:36.104] Browser LOG         ✅ Responsive Image Generation (0.00ms)
+[00:32:36.104] Browser LOG     
+🧪 Running test suite: Caching Performance Tests
+[00:32:36.104] Browser LOG       Running: Request Memoization
+[00:32:36.105] Browser LOG         ✅ Request Memoization (0.10ms)
+[00:32:36.105] Browser LOG       Running: Data Cache Hit Rate
+[00:32:36.105] Browser LOG         ✅ Data Cache Hit Rate (0.00ms)
+[00:32:36.105] Browser LOG       Running: Page Cache Validation
+[00:32:36.105] Browser LOG         ✅ Page Cache Validation (0.00ms)
+[00:32:36.105] Browser LOG     
+🧪 Running test suite: Loading Experience Tests
+[00:32:36.105] Browser LOG       Running: Skeleton Screen Rendering
+[00:32:36.105] Browser LOG         ✅ Skeleton Screen Rendering (0.00ms)
+[00:32:36.105] Browser LOG       Running: Progressive Image Loading
+[00:32:36.105] Browser LOG         ✅ Progressive Image Loading (0.00ms)
+[00:32:36.105] Browser LOG       Running: Loading State Management
+[00:32:36.105] Browser LOG         ✅ Loading State Management (0.00ms)
+[00:32:36.105] Browser LOG     
+🧪 Running test suite: Data Compression Tests
+[00:32:36.105] Browser LOG       Running: Gzip Compression Ratio
+[00:32:36.105] Browser LOG         ✅ Gzip Compression Ratio (0.10ms)
+[00:32:36.105] Browser LOG       Running: Brotli Compression Performance
+[00:32:36.106] Browser LOG         ✅ Brotli Compression Performance (0.00ms)
+[00:32:36.106] Browser LOG       Running: Batch Request Optimization
+[00:32:36.106] Browser LOG         ✅ Batch Request Optimization (0.00ms)
+[00:32:36.106] Browser LOG     
+🧪 Running test suite: Performance Monitoring Tests
+[00:32:36.106] Browser LOG       Running: Web Vitals Collection
+[00:32:36.106] Browser LOG         ✅ Web Vitals Collection (0.00ms)
+[00:32:36.106] Browser LOG       Running: Resource Timing Accuracy
+[00:32:36.106] Browser LOG         ✅ Resource Timing Accuracy (0.20ms)
+[00:32:36.106] Browser LOG       Running: Performance Budget Enforcement
+[00:32:36.106] Browser LOG         ✅ Performance Budget Enforcement (0.10ms)
+[00:32:37.791] Browser LOG     
+🧪 Running test suite: Image Optimization Tests
+[00:32:37.791] Browser LOG       Running: WebP Format Detection
+[00:32:37.791] Browser LOG         ✅ WebP Format Detection (8.20ms)
+[00:32:37.791] Browser LOG       Running: Image Compression
+[00:32:37.791] Browser LOG         ✅ Image Compression (0.10ms)
+[00:32:37.791] Browser LOG       Running: Responsive Image Generation
+[00:32:37.791] Browser LOG         ✅ Responsive Image Generation (0.10ms)
+[00:32:37.791] Browser LOG     
+🧪 Running test suite: Caching Performance Tests
+[00:32:37.791] Browser LOG       Running: Request Memoization
+[00:32:37.791] Browser LOG         ✅ Request Memoization (0.00ms)
+[00:32:37.791] Browser LOG       Running: Data Cache Hit Rate
+[00:32:37.791] Browser LOG         ✅ Data Cache Hit Rate (0.00ms)
+[00:32:37.791] Browser LOG       Running: Page Cache Validation
+[00:32:37.791] Browser LOG         ✅ Page Cache Validation (0.00ms)
+[00:32:37.791] Browser LOG     
+🧪 Running test suite: Loading Experience Tests
+[00:32:37.791] Browser LOG       Running: Skeleton Screen Rendering
+[00:32:37.791] Browser LOG         ✅ Skeleton Screen Rendering (0.00ms)
+[00:32:37.791] Browser LOG       Running: Progressive Image Loading
+[00:32:37.791] Browser LOG         ✅ Progressive Image Loading (0.00ms)
+[00:32:37.791] Browser LOG       Running: Loading State Management
+[00:32:37.791] Browser LOG         ✅ Loading State Management (0.00ms)
+[00:32:37.791] Browser LOG     
+🧪 Running test suite: Data Compression Tests
+[00:32:37.791] Browser LOG       Running: Gzip Compression Ratio
+[00:32:37.791] Browser LOG         ✅ Gzip Compression Ratio (0.10ms)
+[00:32:37.791] Browser LOG       Running: Brotli Compression Performance
+[00:32:37.791] Browser LOG         ✅ Brotli Compression Performance (0.00ms)
+[00:32:37.791] Browser LOG       Running: Batch Request Optimization
+[00:32:37.791] Browser LOG         ✅ Batch Request Optimization (0.00ms)
+[00:32:37.791] Browser LOG     
+🧪 Running test suite: Performance Monitoring Tests
+[00:32:37.791] Browser LOG       Running: Web Vitals Collection
+[00:32:37.791] Browser LOG         ✅ Web Vitals Collection (0.00ms)
+[00:32:37.791] Browser LOG       Running: Resource Timing Accuracy
+[00:32:37.791] Browser LOG         ✅ Resource Timing Accuracy (0.00ms)
+[00:32:37.791] Browser LOG       Running: Performance Budget Enforcement
+[00:32:37.791] Browser LOG         ✅ Performance Budget Enforcement (0.00ms)
+[00:33:05.068] Browser LOG     
+🧪 Running test suite: Image Optimization Tests
+[00:33:05.068] Browser LOG       Running: WebP Format Detection
+[00:33:05.068] Browser LOG         ✅ WebP Format Detection (5.10ms)
+[00:33:05.068] Browser LOG       Running: Image Compression
+[00:33:05.068] Browser LOG         ✅ Image Compression (0.10ms)
+[00:33:05.068] Browser LOG       Running: Responsive Image Generation
+[00:33:05.068] Browser LOG         ✅ Responsive Image Generation (0.10ms)
+[00:33:05.068] Browser LOG     
+🧪 Running test suite: Caching Performance Tests
+[00:33:05.068] Browser LOG       Running: Request Memoization
+[00:33:05.068] Browser LOG         ✅ Request Memoization (0.10ms)
+[00:33:05.068] Browser LOG       Running: Data Cache Hit Rate
+[00:33:05.068] Browser LOG         ✅ Data Cache Hit Rate (0.10ms)
+[00:33:05.068] Browser LOG       Running: Page Cache Validation
+[00:33:05.068] Browser LOG         ✅ Page Cache Validation (0.00ms)
+[00:33:05.068] Browser LOG     
+🧪 Running test suite: Loading Experience Tests
+[00:33:05.068] Browser LOG       Running: Skeleton Screen Rendering
+[00:33:05.068] Browser LOG         ✅ Skeleton Screen Rendering (0.10ms)
+[00:33:05.068] Browser LOG       Running: Progressive Image Loading
+[00:33:05.068] Browser LOG         ✅ Progressive Image Loading (0.00ms)
+[00:33:05.068] Browser LOG       Running: Loading State Management
+[00:33:05.068] Browser LOG         ✅ Loading State Management (0.00ms)
+[00:33:05.068] Browser LOG     
+🧪 Running test suite: Data Compression Tests
+[00:33:05.068] Browser LOG       Running: Gzip Compression Ratio
+[00:33:05.068] Browser LOG         ✅ Gzip Compression Ratio (0.00ms)
+[00:33:05.068] Browser LOG       Running: Brotli Compression Performance
+[00:33:05.068] Browser LOG         ✅ Brotli Compression Performance (0.20ms)
+[00:33:05.068] Browser LOG       Running: Batch Request Optimization
+[00:33:05.068] Browser LOG         ✅ Batch Request Optimization (0.00ms)
+[00:33:05.068] Browser LOG     
+🧪 Running test suite: Performance Monitoring Tests
+[00:33:05.068] Browser LOG       Running: Web Vitals Collection
+[00:33:05.068] Browser LOG         ✅ Web Vitals Collection (0.10ms)
+[00:33:05.068] Browser LOG       Running: Resource Timing Accuracy
+[00:33:05.069] Browser LOG         ✅ Resource Timing Accuracy (0.10ms)
+[00:33:05.069] Browser LOG       Running: Performance Budget Enforcement
+[00:33:05.069] Browser LOG         ✅ Performance Budget Enforcement (0.10ms)
+[00:33:09.186] Browser WARN    Image with src "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-family='Arial' font-size='16'%3E图片占位符%3C/text%3E%3C/svg%3E" is using deprecated "onLoadingComplete" property. Please use the "onLoad" property instead.
+[00:33:09.186] Browser WARN    Image with src "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-family='Arial' font-size='16'%3E图片占位符%3C/text%3E%3C/svg%3E" is using quality "90" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities

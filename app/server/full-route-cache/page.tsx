@@ -2,7 +2,7 @@ export const revalidate = 60; // Full Route Cache：整页缓存 60s
 import { getBaseUrl } from "@/lib/http";
 
 export default async function FullRouteCachePage() {
-  const baseUrl = getBaseUrl();
+  const baseUrl = await getBaseUrl();
   const res = await fetch(`${baseUrl}/api/posts`);
   const data = await res.json();
   const now = new Date();

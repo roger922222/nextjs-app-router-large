@@ -24,8 +24,8 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$headers$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/headers.js [app-rsc] (ecmascript)");
 ;
-function getBaseUrl() {
-    const h = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$headers$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["headers"])();
+async function getBaseUrl() {
+    const h = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$headers$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["headers"])();
     const proto = h.get("x-forwarded-proto") || "http";
     const host = h.get("host") || "localhost:3000";
     return `${proto}://${host}`;
@@ -43,7 +43,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$http$2e$ts__$5b$app$2
 ;
 ;
 async function ServerCacheDemoPage() {
-    const baseUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$http$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getBaseUrl"])();
+    const baseUrl = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$http$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getBaseUrl"])();
     // Data Cache：通过 tags + revalidate 控制数据缓存；注意这只是数据缓存，不是整页缓存
     const dataCacheRes = await fetch(`${baseUrl}/api/posts`, {
         next: {

@@ -1,0 +1,50 @@
+{
+  "node": {
+    "408c5e2c3c8b9af58c38ae6746d08336c8a3139e76": {
+      "workers": {
+        "app/mutations/page": {
+          "moduleId": "[project]/.next-internal/server/app/mutations/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/mutations/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createPost",
+          "filename": "app/mutations/actions.ts"
+        }
+      },
+      "layer": {
+        "app/mutations/page": "rsc"
+      },
+      "exportedName": "createPost",
+      "filename": "app/mutations/actions.ts"
+    },
+    "40a59b44e35cec663d8ee861f8cf3fdb9eb817451e": {
+      "workers": {
+        "app/mutations/page": {
+          "moduleId": "[project]/.next-internal/server/app/mutations/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/mutations/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deletePost",
+          "filename": "app/mutations/actions.ts"
+        }
+      },
+      "layer": {
+        "app/mutations/page": "rsc"
+      },
+      "exportedName": "deletePost",
+      "filename": "app/mutations/actions.ts"
+    },
+    "40c74393e8a61feda8b285963aea15e0953ade26d1": {
+      "workers": {
+        "app/mutations/page": {
+          "moduleId": "[project]/.next-internal/server/app/mutations/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/mutations/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updatePost",
+          "filename": "app/mutations/actions.ts"
+        }
+      },
+      "layer": {
+        "app/mutations/page": "rsc"
+      },
+      "exportedName": "updatePost",
+      "filename": "app/mutations/actions.ts"
+    }
+  },
+  "edge": {}
+}

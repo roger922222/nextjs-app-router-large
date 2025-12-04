@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///Users/bytedance/Downloads/nextjs-app-router-large/app/api/metrics/route.ts"],"sourcesContent":["import { NextResponse } from \"next/server\";\n\nlet count = 0; // 模块级变量：用于观察请求是否被去重（memoized）\n\nexport async function GET(request: Request) {\n  const { searchParams } = new URL(request.url);\n  const reset = searchParams.get(\"reset\");\n  if (reset) count = 0;\n  count += 1;\n  return NextResponse.json({ count, ts: Date.now() });\n}\n"],"names":[],"mappings":";;;;AAAA;;AAEA,IAAI,QAAQ,GAAG,8BAA8B;AAEtC,eAAe,IAAI,OAAgB;IACxC,MAAM,EAAE,YAAY,EAAE,GAAG,IAAI,IAAI,QAAQ,GAAG;IAC5C,MAAM,QAAQ,aAAa,GAAG,CAAC;IAC/B,IAAI,OAAO,QAAQ;IACnB,SAAS;IACT,OAAO,gJAAY,CAAC,IAAI,CAAC;QAAE;QAAO,IAAI,KAAK,GAAG;IAAG;AACnD"}}]
+}

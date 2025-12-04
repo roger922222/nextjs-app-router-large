@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/bytedance/Downloads/nextjs-app-router-large/app/components/SubmitButton.tsx"],"sourcesContent":["\"use client\";\nimport { useFormStatus } from \"react-dom\";\n\nexport default function SubmitButton({ children }: { children: React.ReactNode }) {\n  const { pending } = useFormStatus();\n  return (\n    <button type=\"submit\" disabled={pending}>\n      {pending ? \"处理中...\" : children}\n    </button>\n  );\n}\n"],"names":[],"mappings":";;;;;AACA;AADA;;;AAGe,SAAS,aAAa,EAAE,QAAQ,EAAiC;IAC9E,MAAM,EAAE,OAAO,EAAE,GAAG,IAAA,6NAAa;IACjC,qBACE,8OAAC;QAAO,MAAK;QAAS,UAAU;kBAC7B,UAAU,WAAW;;;;;;AAG5B"}},
+    {"offset": {"line": 29, "column": 0}, "map": {"version":3,"sources":["file:///Users/bytedance/Downloads/nextjs-app-router-large/node_modules/next/src/server/route-modules/app-page/vendored/ssr/react-dom.ts"],"sourcesContent":["module.exports = (\n  require('../../module.compiled') as typeof import('../../module.compiled')\n).vendored['react-ssr']!.ReactDOM\n"],"names":["module","exports","require","vendored","ReactDOM"],"mappings":"AAAAA,OAAOC,OAAO,GACZC,QAAQ,4HACRC,QAAQ,CAAC,YAAY,CAAEC,QAAQ","ignoreList":[0]}}]
+}

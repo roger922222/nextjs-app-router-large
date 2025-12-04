@@ -6,7 +6,7 @@ import {
   generateTestSummary,
   TestReport,
   TestResult
-} from '@/lib/performance-tests';
+} from '@/lib/performance-tests-browser';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';

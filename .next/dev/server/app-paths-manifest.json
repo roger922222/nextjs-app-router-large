@@ -1,4 +1,11 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/code-splitting/page": "app/code-splitting/page.js",
+  "/critical-rendering/page": "app/critical-rendering/page.js",
+  "/data-compression/page": "app/data-compression/page.js",
+  "/image-optimization/page": "app/image-optimization/page.js",
   "/page": "app/page.js",
-  "/server/page": "app/server/page.js"
+  "/performance-monitor/page": "app/performance-monitor/page.js",
+  "/performance-test/page": "app/performance-test/page.js",
+  "/smart-caching/page": "app/smart-caching/page.js"
 }

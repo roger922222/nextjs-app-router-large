@@ -1,0 +1,355 @@
+/* [project]/components/ImageOptimizationDemo.css [app-client] (css) */
+.image-optimization-demo {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.demo-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.demo-header h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.webp-status {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.supported {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.unsupported {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.optimization-comparison {
+  margin-bottom: 3rem;
+}
+
+.optimization-comparison h3 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.comparison-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  display: grid;
+}
+
+.comparison-item {
+  text-align: center;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.comparison-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px #0000001a;
+}
+
+.comparison-item h4 {
+  color: #495057;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.comparison-item p {
+  color: #6c757d;
+  margin-top: 1rem;
+  font-size: .95rem;
+}
+
+.lazy-loading-demo {
+  margin-bottom: 3rem;
+}
+
+.lazy-loading-demo h3 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.lazy-loading-demo p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.lazy-images-container {
+  background: #f8f9fa;
+  border-radius: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-height: 600px;
+  padding: 1rem;
+  display: grid;
+  overflow-y: auto;
+}
+
+.lazy-image-item {
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px #0000001a;
+}
+
+.lazy-image-item p {
+  color: #666;
+  margin-top: .5rem;
+  font-size: .9rem;
+}
+
+.compression-demo {
+  margin-bottom: 3rem;
+}
+
+.compression-demo h3 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.demo-images {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+  display: grid;
+}
+
+.demo-image-item {
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px #0000001a;
+}
+
+.demo-image-item h4 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.demo-image-item p {
+  color: #666;
+  margin: 1rem 0;
+  font-size: .9rem;
+}
+
+.compress-button {
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 6px;
+  padding: .75rem 1.5rem;
+  font-size: .95rem;
+  font-weight: 500;
+  transition: all .3s;
+}
+
+.compress-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px #667eea66;
+}
+
+.compress-button:active {
+  transform: translateY(0);
+}
+
+.compression-result {
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px #0000001a;
+}
+
+.compression-result h4 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.result-stats {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  display: grid;
+}
+
+.stat-item {
+  background: #f8f9fa;
+  border-left: 4px solid #28a745;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.stat-label {
+  color: #666;
+  margin-bottom: .5rem;
+  font-size: .9rem;
+  display: block;
+}
+
+.stat-value {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.performance-metrics {
+  margin-bottom: 3rem;
+}
+
+.performance-metrics h3 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.metrics-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  display: grid;
+}
+
+.metric-card {
+  text-align: center;
+  background: #fff;
+  border-top: 4px solid #667eea;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px #0000001a;
+}
+
+.metric-card h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.metric-card p {
+  color: #666;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.usage-recommendations {
+  margin-bottom: 3rem;
+}
+
+.usage-recommendations h3 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.recommendations-list {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  display: grid;
+}
+
+.recommendation-item {
+  background: #fff;
+  border-left: 4px solid #28a745;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px #0000001a;
+}
+
+.recommendation-item h4 {
+  color: #333;
+  margin-bottom: .75rem;
+  font-size: 1.1rem;
+}
+
+.recommendation-item p {
+  color: #666;
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .image-optimization-demo {
+    padding: 1rem 0;
+  }
+
+  .demo-header h2 {
+    font-size: 2rem;
+  }
+
+  .comparison-grid, .demo-images, .metrics-grid, .recommendations-list {
+    grid-template-columns: 1fr;
+  }
+
+  .lazy-images-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .result-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .optimization-comparison h3, .lazy-loading-demo h3, .compression-demo h3, .performance-metrics h3, .usage-recommendations h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .image-optimization-demo {
+    background: #1a1a1a;
+  }
+
+  .demo-header h2 {
+    color: #fff;
+  }
+
+  .webp-status {
+    color: #ccc;
+  }
+
+  .comparison-item, .demo-image-item, .metric-card, .recommendation-item, .compression-result {
+    background: #2a2a2a;
+    border-color: #444;
+  }
+
+  .comparison-item h4, .demo-image-item h4, .metric-card h4, .recommendation-item h4, .compression-result h4 {
+    color: #fff;
+  }
+
+  .comparison-item p, .demo-image-item p, .metric-card p, .recommendation-item p, .stat-label, .stat-value {
+    color: #ccc;
+  }
+
+  .lazy-images-container {
+    background: #2a2a2a;
+  }
+
+  .lazy-image-item, .stat-item {
+    background: #333;
+  }
+}
+
+/*# sourceMappingURL=components_ImageOptimizationDemo_css_bad6b30c._.single.css.map*/

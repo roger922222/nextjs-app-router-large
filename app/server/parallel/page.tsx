@@ -1,7 +1,7 @@
 import { getBaseUrl } from "@/lib/http";
 
 export default async function ServerParallelPage() {
-  const baseUrl = getBaseUrl();
+  const baseUrl = await getBaseUrl();
   const opts: RequestInit = { cache: "no-store" };
 
   const [aRes, bRes] = await Promise.all([

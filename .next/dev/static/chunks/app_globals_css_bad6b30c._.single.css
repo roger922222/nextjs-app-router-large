@@ -1,0 +1,96 @@
+/* [project]/app/globals.css [app-client] (css) */
+:root {
+  --bg: #f7f7f9;
+  --fg: #111827;
+  --muted: #6b7280;
+  --accent: #2563eb;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji;
+}
+
+header, nav {
+  z-index: 50;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+}
+
+nav .container {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem;
+  padding: .75rem 1rem;
+  display: flex;
+}
+
+nav a {
+  color: var(--fg);
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: .4rem;
+  padding: .35rem .6rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #f3f4f6;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: .6rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+small {
+  color: var(--muted);
+}
+
+button {
+  cursor: pointer;
+}
+
+input, textarea {
+  border: 1px solid #e5e7eb;
+  border-radius: .4rem;
+  width: 100%;
+  padding: .5rem;
+}
+
+label {
+  color: var(--muted);
+  margin-top: .5rem;
+  font-size: .9rem;
+  display: block;
+}
+
+form {
+  gap: .5rem;
+  display: grid;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: .75rem 0;
+}
+
+/*# sourceMappingURL=app_globals_css_bad6b30c._.single.css.map*/

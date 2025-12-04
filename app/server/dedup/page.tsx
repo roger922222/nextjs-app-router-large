@@ -1,7 +1,7 @@
 import { getBaseUrl } from "@/lib/http";
 
 export default async function ServerDedupPage() {
-  const baseUrl = getBaseUrl();
+  const baseUrl = await getBaseUrl();
   // 同一请求上下文中，两次完全相同的 fetch 调用会被 Request Memoization 去重
   const options: RequestInit = { cache: "no-store" };
   const r1 = await fetch(`${baseUrl}/api/metrics`, options);
