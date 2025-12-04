@@ -24,7 +24,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 export default async function MutationsPage() {
   // 也可以在此展示通过内部 API 获取的数据
-  const baseUrl = getBaseUrl();
+  const baseUrl = await getBaseUrl();
   const res = await fetch(`${baseUrl}/api/posts`, { cache: "no-store" });
   const data = await res.json();
 

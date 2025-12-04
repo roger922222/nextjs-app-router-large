@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/bytedance/Downloads/nextjs-app-router-large/app/loading.tsx"],"sourcesContent":["export default function RootLoading() {\n  return (\n    <div style={{ padding: \"1rem\" }}>\n      <section>\n        <h2>页面加载中...</h2>\n        <p>这是一个根级加载占位（app/loading.tsx）。</p>\n      </section>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;QAAI,OAAO;YAAE,SAAS;QAAO;kBAC5B,cAAA,8OAAC;;8BACC,8OAAC;8BAAG;;;;;;8BACJ,8OAAC;8BAAE;;;;;;;;;;;;;;;;;AAIX"}}]
+}

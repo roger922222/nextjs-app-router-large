@@ -1,0 +1,409 @@
+/* components/CodeSplittingDemo.css */
+
+.code-splitting-demo {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.demo-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.demo-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.demo-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 性能统计面板 */
+.performance-stats {
+  margin-bottom: 3rem;
+}
+
+.performance-stats h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-top: 4px solid #667eea;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+/* 组件选择器 */
+.component-selector {
+  margin-bottom: 3rem;
+}
+
+.component-selector h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.component-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.component-button {
+  padding: 1rem 1.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+  text-align: center;
+}
+
+.component-button:hover {
+  border-color: #667eea;
+  background: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+.component-button.active {
+  border-color: #667eea;
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* 动态组件展示区域 */
+.dynamic-components {
+  margin-bottom: 3rem;
+}
+
+.dynamic-components h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.components-container {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-placeholder {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.empty-state {
+  text-align: center;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+/* 预加载演示 */
+.preload-demo {
+  margin-bottom: 3rem;
+}
+
+.preload-demo h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.preload-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.preload-button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #28a745;
+  border-radius: 8px;
+  background: white;
+  color: #28a745;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.preload-button:hover {
+  background: #28a745;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* 代码分割优势 */
+.splitting-benefits {
+  margin-bottom: 3rem;
+}
+
+.splitting-benefits h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-item {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-left: 4px solid #667eea;
+  transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-item h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.benefit-item p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 最佳实践 */
+.best-practices {
+  margin-bottom: 3rem;
+}
+
+.best-practices h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.practices-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.practice-item {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid #28a745;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.practice-item:hover {
+  transform: translateX(5px);
+}
+
+.practice-item h4 {
+  color: #333;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.practice-item p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .code-splitting-demo {
+    padding: 1rem 0;
+  }
+
+  .demo-header h2 {
+    font-size: 2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .component-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .component-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .preload-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-stats h3,
+  .component-selector h3,
+  .dynamic-components h3,
+  .preload-demo h3,
+  .splitting-benefits h3,
+  .best-practices h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* 暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .code-splitting-demo {
+    background: #1a1a1a;
+  }
+
+  .demo-header h2 {
+    color: #ffffff;
+  }
+
+  .demo-header p {
+    color: #cccccc;
+  }
+
+  .performance-stats h3,
+  .component-selector h3,
+  .dynamic-components h3,
+  .preload-demo h3,
+  .splitting-benefits h3,
+  .best-practices h3 {
+    color: #ffffff;
+  }
+
+  .stat-card,
+  .components-container,
+  .benefit-item,
+  .practice-item {
+    background: #2a2a2a;
+    color: #ffffff;
+  }
+
+  .stat-card h4,
+  .benefit-item h4,
+  .practice-item h4 {
+    color: #ffffff;
+  }
+
+  .stat-value {
+    color: #667eea;
+  }
+
+  .component-button {
+    background: #333;
+    border-color: #444;
+    color: #ffffff;
+  }
+
+  .component-button:hover {
+    background: #444;
+    border-color: #667eea;
+  }
+
+  .component-button.active {
+    background: #667eea;
+    color: #ffffff;
+  }
+
+  .loading-placeholder,
+  .empty-state {
+    color: #cccccc;
+  }
+
+  .preload-button {
+    background: #333;
+    border-color: #28a745;
+    color: #28a745;
+  }
+
+  .preload-button:hover {
+    background: #28a745;
+    color: #ffffff;
+  }
+
+  .benefit-item {
+    border-left-color: #667eea;
+  }
+
+  .practice-item {
+    border-left-color: #28a745;
+  }
+
+  .benefit-item p,
+  .practice-item p {
+    color: #cccccc;
+  }
+}

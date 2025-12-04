@@ -8,12 +8,10 @@ export async function createPost(formData: FormData) {
   const post = create({ title, body });
 
   // 变更后，按需重验证
-  revalidateTag("posts");
-  revalidatePath("/client-swr");
-  revalidatePath("/client-react-query");
-  revalidatePath("/server");
-
-  return { ok: true, post };
+  revalidateTag("posts", "page");
+  revalidatePath("/client-swr", "page");
+  revalidatePath("/client-react-query", "page");
+  revalidatePath("/server", "page");
 }
 
 export async function updatePost(formData: FormData) {
@@ -24,25 +22,21 @@ export async function updatePost(formData: FormData) {
     title: typeof title === "string" ? title : undefined,
     body: typeof body === "string" ? body : undefined,
   });
-  if (!post) return { ok: false, error: "Not Found" } as const;
+  if (!post) return;
 
-  revalidateTag("posts");
-  revalidatePath("/client-swr");
-  revalidatePath("/client-react-query");
-  revalidatePath("/server");
-
-  return { ok: true, post };
+  revalidateTag("posts", "page");
+  revalidatePath("/client-swr", "page");
+  revalidatePath("/client-react-query", "page");
+  revalidatePath("/server", "page");
 }
 
 export async function deletePost(formData: FormData) {
   const id = Number(formData.get("id"));
   const ok = remove(id);
-  if (!ok) return { ok: false, error: "Not Found" } as const;
+  if (!ok) return;
 
-  revalidateTag("posts");
-  revalidatePath("/client-swr");
-  revalidatePath("/client-react-query");
-  revalidatePath("/server");
-
-  return { ok: true, id };
+  revalidateTag("posts", "page");
+  revalidatePath("/client-swr", "page");
+  revalidatePath("/client-react-query", "page");
+  revalidatePath("/server", "page");
 }

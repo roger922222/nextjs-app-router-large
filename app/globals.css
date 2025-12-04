@@ -1,4 +1,6 @@
 /* app/globals.css */
+@import url('../styles/image-optimization.css');
+
 :root {
   --bg: #f7f7f9;
   --fg: #111827;

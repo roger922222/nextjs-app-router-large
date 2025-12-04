@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/bytedance/Downloads/nextjs-app-router-large/app/providers.tsx"],"sourcesContent":["\"use client\";\nimport React, { useState } from \"react\";\nimport { SWRConfig } from \"swr\";\nimport { QueryClient, QueryClientProvider } from \"@tanstack/react-query\";\n\n// 将 SWR 与 React Query 的 Provider 统一放置\nexport default function Providers({ children }: { children: React.ReactNode }) {\n  const [queryClient] = useState(() => new QueryClient());\n  const fetcher = (url: string) => fetch(url).then((res) => res.json());\n\n  return (\n    <SWRConfig value={{ fetcher, revalidateOnFocus: false }}>\n      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>\n    </SWRConfig>\n  );\n}\n"],"names":[],"mappings":";;;;;AACA;AACA;AACA;AAAA;;;AAHA;;;;AAMe,SAAS,UAAU,EAAE,QAAQ,EAAiC;;IAC3E,MAAM,CAAC,YAAY,GAAG,IAAA,yKAAQ;8BAAC,IAAM,IAAI,+LAAW;;IACpD,MAAM,UAAU,CAAC,MAAgB,MAAM,KAAK,IAAI,CAAC,CAAC,MAAQ,IAAI,IAAI;IAElE,qBACE,6LAAC,8KAAS;QAAC,OAAO;YAAE;YAAS,mBAAmB;QAAM;kBACpD,cAAA,6LAAC,gNAAmB;YAAC,QAAQ;sBAAc;;;;;;;;;;;AAGjD;GATwB;KAAA"}}]
+}

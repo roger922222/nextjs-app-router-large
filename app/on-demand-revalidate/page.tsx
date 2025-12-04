@@ -1,10 +1,11 @@
-import { revalidateTag } from "next/cache";
+import { revalidateTag, revalidatePath } from "next/cache";
 import SubmitButton from "@/app/components/SubmitButton";
 
 export default function OnDemandRevalidatePage() {
   async function trigger() {
     "use server";
-    revalidateTag("posts");
+    revalidateTag("posts", "page");
+    revalidatePath("/", "layout");
   }
 
   return (

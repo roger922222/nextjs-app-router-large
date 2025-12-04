@@ -17,12 +17,10 @@ export default function StreamingPage() {
       <h2>Suspense 与流式渲染</h2>
       <Suspense fallback={<section><h3>块 1 加载中...</h3></section>}>
         {/* 2s 后显示 */}
-        {/* @ts-expect-error Async Server Component */}
         <SlowBlock ms={2000} label="块 1（2s）" />
       </Suspense>
       <Suspense fallback={<section><h3>块 2 加载中...</h3></section>}>
         {/* 4s 后显示 */}
-        {/* @ts-expect-error Async Server Component */}
         <SlowBlock ms={4000} label="块 2（4s）" />
       </Suspense>
     </div>
